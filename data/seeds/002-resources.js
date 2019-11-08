@@ -9,7 +9,7 @@ exports.seed = function(knex) {
         {id: 2, name: 'docs', description:'Online docs'},
         {id: 3, name: 'lectures', description:'videos of the lectures'},
         {id: 4, name: 'PC', description:'My computer'},
-        {id: 5, name: 'family', description:'hang out with my wife and kiddo'}
+        {id: 5, name: 'family', description:'Spend some qulaity time with the folks'}
       ]);
     });
 };
