@@ -1,13 +1,16 @@
-  
-const express = require("express");
-const projectsRouter = require("./data/projects/projects-router");
-const helmet = require("helmet");
+const express = require('express');
+const helmet = require('helmet');
+
+const projectRouter = require('./routers/projectRouter.js');
+const resourceRouter = require('./routers/resourceRouter.js');
+
+
 const server = express();
 
 server.use(helmet());
 server.use(express.json());
- server.use('/api/projects/', projectsRouter)
 
-server.get("/", (req, res) => res.send("<h1>Ich Bin am Port 8000 Gehort</h1>"));
+server.use('/api/projects', projectRouter);
+server.use('/api/resources', resourceRouter);
 
 module.exports = server;
