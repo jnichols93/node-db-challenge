@@ -6,7 +6,7 @@ const server = express();
 
 server.use(helmet());
 server.use(express.json());
-// server.use('/api/projects/', projectsRouter)
+ server.use('/api/projects/', projectsRouter)
 
 server.get("/", (req, res) => res.send("<h1>Ich Bin am Port 8000 Gehort</h1>"));
 
