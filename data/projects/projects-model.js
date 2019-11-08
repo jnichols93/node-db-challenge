@@ -1,6 +1,11 @@
-const db = require('../dbconfig');
+const db = require('../dbConfig');
 
 module.exports = {
-    // getProjects,
-    // getProject,
+    getProjectById
+}
+
+//join all three tables and display their contents based off the project id
+function getProjectById(id) {
+    return db('projects')
+        .where({id})
 }

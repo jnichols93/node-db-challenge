@@ -1,11 +1,11 @@
-const router = require('express').Router();
-const db = require('../dbconfig');
-const Projects = require('./projects-model')
+const db = require('../dbConfig');
 
-router.get('/', ( req, res ) => {
+module.exports = {
+    getProjectById
+}
 
-})
-
-router.get('/:id', ( req, res ) => {
-    
-})
+//join all three tables and display their contents based off the project id
+function getProjectById(id) {
+    return db('projects')
+        .where({id})
+}
