@@ -48,13 +48,13 @@ function getProjects() {
             if(project.completed){
                 const updatedBool = {
                     ...project,
-                    completed:"YOU DUN DID IT" 
+                    completed: true
                 };
                 return updatedBool;
             } else {
                 const updatedBool = {
                     ...project,
-                    completed: "AINT DID"
+                    completed: false
                 };
                 return updatedBool;
             }
