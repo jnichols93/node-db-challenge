@@ -5,7 +5,7 @@ const router = express.Router();
 router.post('/', (req, res) => {
     const newResource = req.body;
     if (!newResource.name) {
-        res.status(400).json({ error: "Resource Name is required" })
+        res.status(400).json({ error: "YOU DIDNT SPECIFY THE RESCOURCES YOU WANTED MY GUY" })
     } else {
         helpers.addResource(newResource)
         .then(resp => {
@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
         })
         .catch(err => {
             console.log(err);
-            res.status(500).json({ error: "Server error adding Resource" })
+            res.status(500).json({ error: "THE GOODS CANT GET GOT" })
         })
     }
 })
@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
     })
     .catch(err => {
         console.log(err);
-        res.status(500).json({ error: "Server error getting Resources" })
+        res.status(500).json({ error: "GETTING THE GOODS" })
     })
 })
 

@@ -59,7 +59,7 @@ router.get('/tasks', (req, res) => {
     })
     .catch(err => {
         console.log(err);
-        res.status(500).json({ error: "Server error getting tasks" })
+        res.status(500).json({ error: "TIME TO CRY IN THE SHOWER CUZ YO SERVER IS BROKE AF" })
     })
 })
 
